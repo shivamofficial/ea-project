@@ -311,27 +311,27 @@
         <p>Those appear pretty similar, and you might think they are equally good. However, the timing information suggests otherwise:</p>
 
 </article>
-<table class="class1">
-    <tr>
-        <th></th>
-        <th class="rows">2 by 3 map</th>
-        <th class="rows">3 by 3 map</th>
-        <th class="rows">3 by 4 map</th>
-    
+
+<table align="center" border="1" cellpadding="4">
+    <tbody><tr bgcolor="#cccccc"> 
+      <td bgcolor="#ffffff">&nbsp;</td>
+      <td>2 by 3 map</td>
+      <td>3 by 3 map</td>
+      <td>3 by 4 map</td>
     </tr>
     <tr>
-        <td class="col">Method 1:</td>
-        <td>60 ms.</td>
-        <td>	940 ms.</td>
-        <td>	60530 ms. (1 minute)</td>
+      <td bgcolor="#cccccc">Method 1:</td>
+      <td>60 ms.</td>
+      <td>940 ms.</td>
+      <td>60530 ms. (1 minute)</td>
     </tr>
     <tr>
-        <td class="col">Method 2:</td>
-        <td>0ms.</td>
-        <td>0ms.</td>
-        <td>0ms.</td>
+      <td bgcolor="#cccccc">Method 2:</td>
+      <td>0ms.</td>
+      <td>0 ms.</td>
+      <td>0 ms</td>
     </tr>
-</table>
+  </tbody></table>
 <p>The zeros in the above table indicate times too short to measure (less than 1 millisecond). Why this huge difference? Either of these methods could have exponential growth. Eliminating a node automatically eliminates all of its descendents, and this will often prevent exponential growth. Conversely, by waiting to check until a leaf node is reached, exponential growth is practically guaranteed.<i><b> If there is any way to eliminate children (reduce the set of choices), do so!</b></i></p>
 <h2>Debugging techniques</h2>
 <p>Often our first try at a program doesn't work, and we need to debug it. Debuggers are helpful, but sometimes we need to fall back on inserting print statements. There are some simple tricks to making effective use of print statements. These tricks can be applied to any program, but are especially useful when you are trying to debug recursive routines.</p>
